@@ -1,0 +1,17 @@
+public static void main(String[] args) {
+        Scanner keyboard = new Scanner(System.in);
+        // Declare Variables
+        double kilometer = 1.60935;            // 1 mile = 1.60935 km
+        float input,convert;
+        
+        // Get User Input
+        System.out.print("Input Miles = ");
+        input = keyboard.nextFloat();
+        
+        // Calculations
+        convert = (float) (input * kilometer); // Conversion from Miles to KM
+        
+        // Outputs
+        System.out.println(input+" miles is equal to "+convert+" kilometers.");
+        
+    }
