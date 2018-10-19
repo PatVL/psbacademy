@@ -1,0 +1,20 @@
+public static void main(String[] args) {
+        // Declare Scanner
+        Scanner keyboard = new Scanner(System.in);
+        
+        // Declare Variable
+        double radius,diameter,area,circum;
+        
+        // Output to User
+        System.out.print("Enter radius of circle = ");
+        radius   = keyboard.nextFloat();            // Get user input of radius
+        diameter = radius * 2;                      // Calculate diameter
+        area     = (double) (Math.PI*radius*radius); // Calculate area
+        circum   = (double) (Math.PI*diameter);      // Calculate circumference
+       
+        // Prints Everything out
+        System.out.println("Circle's diameter = "+diameter+
+                           "\nCircle's circumference = "+circum+
+                           "\nCircle's area = "+area);
+
+    }
