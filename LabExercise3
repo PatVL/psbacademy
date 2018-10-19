@@ -1,0 +1,23 @@
+public static void main(String[] args) {
+        // Declare Scanner
+        Scanner keyboard = new Scanner(System.in);
+        
+        // Declare Variable
+        int x1,x2,x3,total;
+        float average;
+        
+        // Get User Inputs
+        System.out.print("Input Integer 1 = ");
+        x1 = keyboard.nextInt();                    // Store input to x1   
+        System.out.print("Input Integer 2 = ");
+        x2 = keyboard.nextInt();                    // Store input to x2
+        System.out.print("Input Integer 3 = ");
+        x3 = keyboard.nextInt();                    // Store input to x3
+        total = (x1+x2+x3);
+        average = (float) total / 3 ;    // Calculate the Average
+        
+        // Output to User
+        System.out.println("Total of Integers = "+total);
+        System.out.printf("Average = "+"%.2f",average); 
+        System.out.println();
+    }
