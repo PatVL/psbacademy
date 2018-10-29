@@ -1,0 +1,37 @@
+package labExercise2;
+import java.util.Scanner;
+
+public class Q2 {
+    public static void main(String[] args){
+        Scanner keyboard = new Scanner(System.in); // Declare Scanner
+        int input = 0; // Declare input integer
+        int speed = 0; // Declare speed integer
+        String category = null; // Declare category string
+        
+        System.out.print("Input Wind Speed in (mph) : "); 
+        if(keyboard.hasNextInt()){ // Check if input has Integer
+            input = keyboard.nextInt(); // Get user input
+            if (input >= 0) { // If user input 0 or larger, save input value in speed
+                speed = input;
+            }else  { // If user input negative numbers, print this message
+                System.out.println("Please input either 0 or a positive value");
+            }
+        }
+        else{ // If user input anything else than an integer, print this message
+            System.out.print("Not a valid input!\n");
+        }
+        if(speed > 73){
+            // If speed is above 73, check what category is the wind 
+            if(speed >= 74 && speed <= 95){category = "1";}
+            else if(speed >= 96 && speed <= 110){category = "2";}
+            else if(speed >= 111 && speed <= 130){category = "3";}
+            else if(speed >= 131 && speed < 155){category = "4";}
+            else if(speed >= 155){category = "5";}
+            // Output message
+            System.out.println("Wind speed of "+speed+" miles per hour, has the Hurricane category of "+category);
+        }
+        else if (speed > 0 && speed < 74) {System.out.println("Wind is fine.");} // If speed is above 0 and below 74, Output this message
+        else if (speed == 0){System.out.println("No wind");} // If speed is 0, there is no wind
+   
+    }
+}
