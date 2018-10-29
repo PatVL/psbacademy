@@ -2,7 +2,6 @@ public static Scanner keyboard = new Scanner(System.in);
     public static void main(String[] args) {
         // 2 Dives
         String[] pg        = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
-        String[] r_pg      = {"Z","Y","X","W","V","U","T","S","R","Q","P","O","N","M","L","K","J","I","H","G","F","E","D","C","B","A"}; // Remove
         int[]   depths     = {10,12,14,16,18,20,22,25,30,35,40,42};
         int[]   andl       = {209,138,90,65,50,39,32,25,17,11,7};   
         int[][] bottomTime = 
