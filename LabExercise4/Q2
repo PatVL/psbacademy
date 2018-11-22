@@ -1,0 +1,34 @@
+package labExercise4;
+// @author justinmahendra
+public class Q2 {
+    public static void main(String[] args){
+        // Create a Triangle with base of 10 and height of 10
+        Triangle triangle1 = new Triangle(10,10);
+        System.out.println("The area of Triangle with base of " + triangle1.base + " and height of " + triangle1.height + " has area of " + triangle1.getArea());
+        
+        // Create a Triangle with base of 10 and height of 10
+        Triangle triangle2 = new Triangle(20,50);
+        System.out.println("The area of Triangle with base of " + triangle2.base + " and height of " + triangle2.height + " has area of " + triangle2.getArea());
+        
+        // Create a Triangle with base of 10 and height of 10
+        Triangle triangle3 = new Triangle(50,100);
+        System.out.println("The area of Triangle with base of " + triangle3.base + " and height of " + triangle3.height + " has area of " + triangle3.getArea());
+    }
+}
+
+// Define the Triangle class with two constructors
+class Triangle {
+    double base,height;
+    /** Construct a Triangle with a specified radius */
+    Triangle(double newBase, double newHeight) {
+        base = newBase;
+        height = newHeight;
+    }
+    
+    /** Return the area of this Triangle */
+    double getArea() {
+        return 0.5 * base * height;
+    }
+    
+}
+
