@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+
+//Added that infinite loop for diving in case you need it -Daweyz
+
 public class ExperimentalTestClean {
     public static Scanner keyboard = new Scanner(System.in);
     public static void main(String[] args){
@@ -14,19 +17,27 @@ public class ExperimentalTestClean {
         dive.setDepth();
         dive.setTime();
         
-        // Second Dive need to see First Dive --> Depth + Time to calculate.
-        DivingCalculator.MultipleDives dive2 = new DivingCalculator.MultipleDives();
-        dive2.setDepth(dive.depth);
-        dive2.setTime();
-        dive2.getSurfaceInterval(dive.time);
-        dive2.getNewPressureGroup();
-        
-        // Second Dive need to see Second Dive --> Depth + Time to calculate.
-        DivingCalculator.MultipleDives dive3 = new DivingCalculator.MultipleDives();
-        dive3.setDepth(dive2.depth);
-        dive3.setTime();
-        dive3.getSurfaceInterval(dive2.time);
-        dive3.getNewPressureGroup();  
+        int previousDepth = dive.depth;
+        int previousTime = dive.time;
+        DivingCalculator.MultipleDives dive2Plus = new DivingCalculator.MultipleDives();
+        for(;;){
+            if (previousDepth == 0){
+                System.out.println("Can't dive again bro");
+                break;
+            }
+            System.out.print("Would you like to dive again?(Input 1 for yes and 2 for no): ");
+            int i = keyboard.nextInt();
+            
+            if (i==2){
+                    break;
+            }
+            dive2Plus.setDepth(previousDepth);
+            dive2Plus.setTime();
+            dive2Plus.getSurfaceInterval(previousTime);
+            dive2Plus.getNewPressureGroup();
+            previousDepth = dive2Plus.depth;
+            previousTime = dive2Plus.time;
+        }
     }
     
     public static class DivingCalculator{
